@@ -1,0 +1,42 @@
+version: 1
+capital: 5000000
+holdings: 20
+rebalance: weekly
+universe: 全A
+source: local_csv
+exclude_st: true
+min_listing_days: 60
+min_amount: 20000000
+strict_data: true
+weights:
+  ep: 0.20
+  bp: 0.15
+  roe: 0.20
+  momentum_60: 0.15
+  reversal_5: 0.15
+  volatility_20: 0.15
+risk:
+  single: 0.10
+  industry: 0.25
+  top5: 0.40
+  daily_turnover: 0.30
+  warn_drawdown: 0.15
+  reduce_drawdown: 0.20
+  volatility: 0.30
+costs:
+  commission: 0.00025
+  minimum: 5.0
+  transfer: 0.00001
+  stamp: 0.0005
+  slippage: 0.0005
+  impact: 0.001
+  participation: 0.05
+realtime:
+  interval: 3
+  batch_size: 500
+  concurrency: 6
+  stale_warn: 5
+  stale_stop: 15
+  failures_switch: 3
+  failures_backoff: 5
+  retention_days: 30

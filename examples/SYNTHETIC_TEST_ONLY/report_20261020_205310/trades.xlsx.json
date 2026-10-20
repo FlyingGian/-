@@ -1,0 +1,162 @@
+{
+  "data_version": "f2000253bd15238a7d05b2d1e4b6fdf508b84aa6617392ee96978f6c8880d647",
+  "data_provenance": "synthetic-test-only",
+  "capital": 5000000,
+  "start": "2023-05-09",
+  "end": "2023-06-27",
+  "execution": "open",
+  "rules_version": "cn-equities-2023.08-v1",
+  "strict": true,
+  "warnings": [
+    "合成测试样例：不是真实市场数据、真实回测业绩或今日荐股。测试日历也为合成夹具。",
+    "研究回测不代表未来收益；日频成交与容量为保守近似；分红按税前。",
+    "未导入真实基准；不输出虚构超额收益或跟踪误差"
+  ],
+  "parameters": {
+    "capital": 5000000,
+    "frequency": "weekly",
+    "strict": true,
+    "daily_turnover": 0.3,
+    "warn_drawdown": 0.15,
+    "reduce_drawdown": 0.2,
+    "execution": "open",
+    "costs": {
+      "commission": 0.00025,
+      "minimum": 5.0,
+      "transfer": 1e-05,
+      "stamp": 0.0005,
+      "slippage": 0.0005,
+      "impact": 0.001,
+      "participation": 0.05,
+      "multiplier": 1
+    },
+    "rules": {
+      "rule_version": "cn-equities-2023.08-v1",
+      "reviewed_on": "2026-10-20",
+      "verified_through": "2023-08-28",
+      "notice": "需以交易所最新规则为准；证券级特别安排以导入的上下限为准。",
+      "sources": [
+        "https://www.sse.com.cn/lawandrules/sselawsrules/trade/universal/",
+        "https://www.szse.cn/lawrules/rule/trade/",
+        "https://www.bse.cn/business_rules/",
+        "https://www.chinaclear.cn/"
+      ],
+      "price_tick": 0.01,
+      "rules": {
+        "main": [
+          {
+            "effective": "1996-12-16",
+            "normal": 0.1,
+            "st": 0.05,
+            "ipo_days": 1,
+            "ipo_up": 0.44,
+            "ipo_down": 0.36
+          },
+          {
+            "effective": "2023-04-10",
+            "normal": 0.1,
+            "st": 0.05,
+            "ipo_days": 5,
+            "ipo_up": null,
+            "ipo_down": null
+          }
+        ],
+        "chinext": [
+          {
+            "effective": "2009-10-30",
+            "normal": 0.1,
+            "st": 0.1,
+            "ipo_days": 1,
+            "ipo_up": 0.44,
+            "ipo_down": 0.36
+          },
+          {
+            "effective": "2020-08-24",
+            "normal": 0.2,
+            "st": 0.2,
+            "ipo_days": 5,
+            "ipo_up": null,
+            "ipo_down": null
+          }
+        ],
+        "star": [
+          {
+            "effective": "2019-07-22",
+            "normal": 0.2,
+            "st": 0.2,
+            "ipo_days": 5,
+            "ipo_up": null,
+            "ipo_down": null
+          }
+        ],
+        "bse": [
+          {
+            "effective": "2021-11-15",
+            "normal": 0.3,
+            "st": 0.3,
+            "ipo_days": 1,
+            "ipo_up": null,
+            "ipo_down": null
+          }
+        ]
+      },
+      "stamp_schedule": [
+        {
+          "effective": "2008-09-19",
+          "rate": 0.001
+        },
+        {
+          "effective": "2023-08-28",
+          "rate": 0.0005
+        }
+      ],
+      "transfer_schedule": [
+        {
+          "effective": "2015-08-01",
+          "rate": 2e-05
+        },
+        {
+          "effective": "2022-04-29",
+          "rate": 1e-05
+        }
+      ],
+      "lot_rules": {
+        "main": {
+          "minimum": 100,
+          "step": 100
+        },
+        "chinext": {
+          "minimum": 100,
+          "step": 100
+        },
+        "star": {
+          "minimum": 200,
+          "step": 1
+        },
+        "bse": {
+          "minimum": 100,
+          "step": 1
+        }
+      }
+    },
+    "strategy": {
+      "weights": {
+        "momentum_20": 0.5,
+        "reversal_5": 0.5
+      },
+      "holdings": 10,
+      "index_code": null,
+      "exclude_st": true,
+      "min_listing_days": 20,
+      "min_amount": 0,
+      "single": 0.1,
+      "industry": 0.25,
+      "top5": 0.4,
+      "neutralize": true,
+      "blacklist": [],
+      "whitelist": [],
+      "rules": []
+    }
+  },
+  "config_hash": "bf14df336f44e0a349eb8fdcf9d8c4fe17ec5be863a811c385f833278cd75b57"
+}

@@ -1,0 +1,9 @@
+rules:
+  limit_up: {enabled: true, threshold: 0.045, cooldown: 300}
+  break_limit: {enabled: true, threshold: 0.01, cooldown: 120}
+  limit_down: {enabled: true, threshold: -0.045, cooldown: 300}
+  surge: {enabled: true, threshold: 0.01, cooldown: 120}
+  plunge: {enabled: true, threshold: -0.01, cooldown: 120}
+  volume_spike: {enabled: true, threshold: 3.0, cooldown: 600}
+  pullback: {enabled: true, threshold: 0.015, cooldown: 600}
+  queue_drop: {enabled: true, threshold: 0.5, cooldown: 300}

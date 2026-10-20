@@ -1,0 +1,20 @@
+[
+  {
+    "project": "akshare",
+    "url": "https://raw.githubusercontent.com/akfamily/akshare/main/LICENSE",
+    "status": 200,
+    "license_excerpt": "MIT License\n\nCopyright (c) 2019-2026 Albert King\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files ("
+  },
+  {
+    "project": "tushare",
+    "url": "https://raw.githubusercontent.com/waditu/tushare/master/LICENSE",
+    "status": 200,
+    "license_excerpt": "Copyright (c) 2015, 挖地兔\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions "
+  },
+  {
+    "project": "pyqtgraph",
+    "url": "https://raw.githubusercontent.com/pyqtgraph/pyqtgraph/master/LICENSE.txt",
+    "status": 200,
+    "license_excerpt": "Copyright (c) 2012  University of North Carolina at Chapel Hill\nLuke Campagnola    ('luke.campagnola@%s.com' % 'gmail')\n\nThe MIT License\nPermission is hereby granted, free of charg"
+  }
+]

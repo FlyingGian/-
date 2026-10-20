@@ -1,0 +1,15 @@
+name: 缺陷报告
+description: 报告可复现的产品问题，请勿上传Token或个人持仓
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境自检结果（请脱敏）
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤、预期与实际结果
+    validations:
+      required: true

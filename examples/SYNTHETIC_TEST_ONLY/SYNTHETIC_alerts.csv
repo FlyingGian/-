@@ -1,0 +1,2 @@
+﻿code,name,kind,quote_ts,price,change,source,evidence
+600000,合成测试证券,limit_up,2026-10-20T10:00:00+08:00,11,0.10000000000000009,synthetic-test-only,价格/五档盘口

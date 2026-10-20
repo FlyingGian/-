@@ -1,0 +1,48 @@
+{
+  "notice": "合成测试样例：非真实行情、非荐股、非投资业绩。研究工具，不构成投资建议，不承诺收益。历史回测不代表未来表现。免费行情仅限个人研究；数据完整性、流动性、税费与模型误差可能影响结果。",
+  "data_version": "f2000253bd15238a7d05b2d1e4b6fdf508b84aa6617392ee96978f6c8880d647",
+  "parameters": {
+    "version": 1,
+    "capital": 5000000,
+    "holdings": 10,
+    "rebalance": "weekly",
+    "universe": "全A",
+    "source": "local_csv",
+    "exclude_st": true,
+    "min_listing_days": 20,
+    "min_amount": 0,
+    "strict_data": true,
+    "weights": {
+      "momentum_20": 0.5,
+      "reversal_5": 0.5
+    },
+    "risk": {
+      "single": 0.1,
+      "industry": 0.25,
+      "top5": 0.4,
+      "daily_turnover": 0.3,
+      "warn_drawdown": 0.15,
+      "reduce_drawdown": 0.2,
+      "volatility": 0.3
+    },
+    "costs": {
+      "commission": 0.00025,
+      "minimum": 5.0,
+      "transfer": 1e-05,
+      "stamp": 0.0005,
+      "slippage": 0.0005,
+      "impact": 0.001,
+      "participation": 0.05
+    },
+    "realtime": {
+      "interval": 3,
+      "batch_size": 500,
+      "concurrency": 6,
+      "stale_warn": 5,
+      "stale_stop": 15,
+      "failures_switch": 3,
+      "failures_backoff": 5,
+      "retention_days": 30
+    }
+  }
+}

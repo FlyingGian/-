@@ -1,0 +1,14 @@
+{
+  "rounds": 1,
+  "requested_symbols": 2,
+  "scope": "有限代码连接测试，非全市场压测",
+  "p50_seconds": 0.047395351999966806,
+  "p95_seconds": 0.047395351999966806,
+  "coverage_mean": 0.0,
+  "failure_mean": 1.0,
+  "rss_mb": 113.7578125,
+  "errors": [
+    "ProxyError: 403 Forbidden"
+  ],
+  "passed": false
+}

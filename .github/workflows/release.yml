@@ -1,0 +1,59 @@
+name: Build downloadable release
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag
+        required: true
+        default: v1.0.0
+permissions:
+  contents: write
+concurrency:
+  group: release-${{ github.event.inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      RELEASE_TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download pinned Windows wheels for Python 3.12 and 3.13
+        run: python scripts/build_wheels.py
+      - name: Build source and offline distribution
+        run: python scripts/build_release.py --output release-assets
+      - name: Keep build artifacts available independently of release publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: AshareQuant-release-files
+          path: |
+            release-assets/*.zip
+            release-assets/*.bundle
+            release-assets/SHA256SUMS.txt
+      - name: Publish downloadable files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          cat > /tmp/asharequant-release-notes.md <<'NOTES'
+          AshareQuant 1.0 research desktop for CPython 3.12/3.13 x64.
+
+          Download the source ZIP. For offline installation, also download the Windows Wheels ZIP and extract both into the same parent directory. Open start.bat from the resulting AshareQuant folder.
+
+          Includes 46 factors, point-in-time selection, conservative A-share matching, risk controls, real-time monitoring and research reports. Synthetic examples are explicitly labelled. Live-market performance and production acceptance remain subject to the limitations documented in docs/ACCEPTANCE.md.
+
+          Local Linux verification: 102 tests passed on each Python version. Current remote CI results are shown in Actions. Source code and dependencies do not include a licensed full-market historical database.
+          NOTES
+          if ! gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "AshareQuant $RELEASE_TAG" --notes-file /tmp/asharequant-release-notes.md
+          fi
+          gh release upload "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" release-assets/*.zip release-assets/*.bundle release-assets/SHA256SUMS.txt --clobber

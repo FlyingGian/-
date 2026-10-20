@@ -1,0 +1,279 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>AshareQuant 研究报告</title><style>body{font:15px system-ui;max-width:1100px;margin:40px auto;padding:24px;background:#101824;color:#dce6f2}table{border-collapse:collapse;width:100%}th,td{padding:10px;border-bottom:1px solid #304252;text-align:left}img{width:100%}pre{white-space:pre-wrap}.notice{padding:18px;background:#463524;border-radius:8px}</style><h1>AshareQuant 研究报告</h1><p class="notice">合成测试样例：非真实行情、非荐股、非投资业绩。研究工具，不构成投资建议，不承诺收益。历史回测不代表未来表现。免费行情仅限个人研究；数据完整性、流动性、税费与模型误差可能影响结果。</p><p>数据版本：f2000253bd15238a7d05b2d1e4b6fdf508b84aa6617392ee96978f6c8880d647</p><p>合成测试样例：不是真实市场数据、真实回测业绩或今日荐股。测试日历也为合成夹具。；研究回测不代表未来收益；日频成交与容量为保守近似；分红按税前。；未导入真实基准；不输出虚构超额收益或跟踪误差</p><img src="equity.png"><h2>绩效</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>metric</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>total_return</td>
+      <td>-0.023887</td>
+    </tr>
+    <tr>
+      <td>annual_return</td>
+      <td>-0.155695</td>
+    </tr>
+    <tr>
+      <td>annual_volatility</td>
+      <td>0.003801</td>
+    </tr>
+    <tr>
+      <td>sharpe</td>
+      <td>-44.513505</td>
+    </tr>
+    <tr>
+      <td>max_drawdown</td>
+      <td>0.023887</td>
+    </tr>
+    <tr>
+      <td>calmar</td>
+      <td>-6.517866</td>
+    </tr>
+    <tr>
+      <td>drawdown_duration</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>recovery_days</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>drawdown_peak_date</td>
+      <td>2023-05-09</td>
+    </tr>
+    <tr>
+      <td>drawdown_trough_date</td>
+      <td>2023-06-27</td>
+    </tr>
+    <tr>
+      <td>daily_win_rate</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>sessions</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>monthly</td>
+      <td>{"2023-05-31": -0.011291431851368605, "2023-06-30": -0.012739809063709306}</td>
+    </tr>
+    <tr>
+      <td>yearly</td>
+      <td>{"2023": -0.023887390229235916}</td>
+    </tr>
+    <tr>
+      <td>total_fees</td>
+      <td>7153.2384</td>
+    </tr>
+    <tr>
+      <td>annual_turnover</td>
+      <td>16.184475</td>
+    </tr>
+    <tr>
+      <td>cost_ratio</td>
+      <td>0.001431</td>
+    </tr>
+    <tr>
+      <td>capacity_estimate</td>
+      <td>178243773.688279</td>
+    </tr>
+    <tr>
+      <td>capacity_note</td>
+      <td>成交额参与率粗估，非可执行容量承诺</td>
+    </tr>
+    <tr>
+      <td>trade_win_rate</td>
+      <td>0.428571</td>
+    </tr>
+    <tr>
+      <td>profit_loss_ratio</td>
+      <td>0.165189</td>
+    </tr>
+    <tr>
+      <td>average_holding_days</td>
+      <td>17.238095</td>
+    </tr>
+    <tr>
+      <td>oos_warning</td>
+      <td>不足独立两年样本外；不能证明泛化能力</td>
+    </tr>
+    <tr>
+      <td>cost_erosion_amount</td>
+      <td>12722.820743</td>
+    </tr>
+    <tr>
+      <td>cost_sensitivity</td>
+      <td>{"1": -0.023887390229235916, "0": -0.021342826080686605, "2": -0.026574972279703846, "3": -0.02933730007792823}</td>
+    </tr>
+    <tr>
+      <td>stress_intervals</td>
+      <td>{"2018熊市": {"status": "数据/回测区间不足，未验证"}, "2024年初小盘压力": {"status": "数据/回测区间不足，未验证"}}</td>
+    </tr>
+    <tr>
+      <td>holdings_sensitivity</td>
+      <td>{"8": -0.02386010575394626, "12": -0.02157111048614402}</td>
+    </tr>
+  </tbody>
+</table><h2>月度收益</h2><img src="monthly.png"><h2>参数快照</h2><pre>{
+  &quot;data_version&quot;: &quot;f2000253bd15238a7d05b2d1e4b6fdf508b84aa6617392ee96978f6c8880d647&quot;,
+  &quot;data_provenance&quot;: &quot;synthetic-test-only&quot;,
+  &quot;capital&quot;: 5000000,
+  &quot;start&quot;: &quot;2023-05-09&quot;,
+  &quot;end&quot;: &quot;2023-06-27&quot;,
+  &quot;execution&quot;: &quot;open&quot;,
+  &quot;rules_version&quot;: &quot;cn-equities-2023.08-v1&quot;,
+  &quot;strict&quot;: true,
+  &quot;warnings&quot;: [
+    &quot;合成测试样例：不是真实市场数据、真实回测业绩或今日荐股。测试日历也为合成夹具。&quot;,
+    &quot;研究回测不代表未来收益；日频成交与容量为保守近似；分红按税前。&quot;,
+    &quot;未导入真实基准；不输出虚构超额收益或跟踪误差&quot;
+  ],
+  &quot;parameters&quot;: {
+    &quot;capital&quot;: 5000000,
+    &quot;frequency&quot;: &quot;weekly&quot;,
+    &quot;strict&quot;: true,
+    &quot;daily_turnover&quot;: 0.3,
+    &quot;warn_drawdown&quot;: 0.15,
+    &quot;reduce_drawdown&quot;: 0.2,
+    &quot;execution&quot;: &quot;open&quot;,
+    &quot;costs&quot;: {
+      &quot;commission&quot;: 0.00025,
+      &quot;minimum&quot;: 5.0,
+      &quot;transfer&quot;: 1e-05,
+      &quot;stamp&quot;: 0.0005,
+      &quot;slippage&quot;: 0.0005,
+      &quot;impact&quot;: 0.001,
+      &quot;participation&quot;: 0.05,
+      &quot;multiplier&quot;: 1
+    },
+    &quot;rules&quot;: {
+      &quot;rule_version&quot;: &quot;cn-equities-2023.08-v1&quot;,
+      &quot;reviewed_on&quot;: &quot;2026-10-20&quot;,
+      &quot;verified_through&quot;: &quot;2023-08-28&quot;,
+      &quot;notice&quot;: &quot;需以交易所最新规则为准；证券级特别安排以导入的上下限为准。&quot;,
+      &quot;sources&quot;: [
+        &quot;https://www.sse.com.cn/lawandrules/sselawsrules/trade/universal/&quot;,
+        &quot;https://www.szse.cn/lawrules/rule/trade/&quot;,
+        &quot;https://www.bse.cn/business_rules/&quot;,
+        &quot;https://www.chinaclear.cn/&quot;
+      ],
+      &quot;price_tick&quot;: 0.01,
+      &quot;rules&quot;: {
+        &quot;main&quot;: [
+          {
+            &quot;effective&quot;: &quot;1996-12-16&quot;,
+            &quot;normal&quot;: 0.1,
+            &quot;st&quot;: 0.05,
+            &quot;ipo_days&quot;: 1,
+            &quot;ipo_up&quot;: 0.44,
+            &quot;ipo_down&quot;: 0.36
+          },
+          {
+            &quot;effective&quot;: &quot;2023-04-10&quot;,
+            &quot;normal&quot;: 0.1,
+            &quot;st&quot;: 0.05,
+            &quot;ipo_days&quot;: 5,
+            &quot;ipo_up&quot;: null,
+            &quot;ipo_down&quot;: null
+          }
+        ],
+        &quot;chinext&quot;: [
+          {
+            &quot;effective&quot;: &quot;2009-10-30&quot;,
+            &quot;normal&quot;: 0.1,
+            &quot;st&quot;: 0.1,
+            &quot;ipo_days&quot;: 1,
+            &quot;ipo_up&quot;: 0.44,
+            &quot;ipo_down&quot;: 0.36
+          },
+          {
+            &quot;effective&quot;: &quot;2020-08-24&quot;,
+            &quot;normal&quot;: 0.2,
+            &quot;st&quot;: 0.2,
+            &quot;ipo_days&quot;: 5,
+            &quot;ipo_up&quot;: null,
+            &quot;ipo_down&quot;: null
+          }
+        ],
+        &quot;star&quot;: [
+          {
+            &quot;effective&quot;: &quot;2019-07-22&quot;,
+            &quot;normal&quot;: 0.2,
+            &quot;st&quot;: 0.2,
+            &quot;ipo_days&quot;: 5,
+            &quot;ipo_up&quot;: null,
+            &quot;ipo_down&quot;: null
+          }
+        ],
+        &quot;bse&quot;: [
+          {
+            &quot;effective&quot;: &quot;2021-11-15&quot;,
+            &quot;normal&quot;: 0.3,
+            &quot;st&quot;: 0.3,
+            &quot;ipo_days&quot;: 1,
+            &quot;ipo_up&quot;: null,
+            &quot;ipo_down&quot;: null
+          }
+        ]
+      },
+      &quot;stamp_schedule&quot;: [
+        {
+          &quot;effective&quot;: &quot;2008-09-19&quot;,
+          &quot;rate&quot;: 0.001
+        },
+        {
+          &quot;effective&quot;: &quot;2023-08-28&quot;,
+          &quot;rate&quot;: 0.0005
+        }
+      ],
+      &quot;transfer_schedule&quot;: [
+        {
+          &quot;effective&quot;: &quot;2015-08-01&quot;,
+          &quot;rate&quot;: 2e-05
+        },
+        {
+          &quot;effective&quot;: &quot;2022-04-29&quot;,
+          &quot;rate&quot;: 1e-05
+        }
+      ],
+      &quot;lot_rules&quot;: {
+        &quot;main&quot;: {
+          &quot;minimum&quot;: 100,
+          &quot;step&quot;: 100
+        },
+        &quot;chinext&quot;: {
+          &quot;minimum&quot;: 100,
+          &quot;step&quot;: 100
+        },
+        &quot;star&quot;: {
+          &quot;minimum&quot;: 200,
+          &quot;step&quot;: 1
+        },
+        &quot;bse&quot;: {
+          &quot;minimum&quot;: 100,
+          &quot;step&quot;: 1
+        }
+      }
+    },
+    &quot;strategy&quot;: {
+      &quot;weights&quot;: {
+        &quot;momentum_20&quot;: 0.5,
+        &quot;reversal_5&quot;: 0.5
+      },
+      &quot;holdings&quot;: 10,
+      &quot;index_code&quot;: null,
+      &quot;exclude_st&quot;: true,
+      &quot;min_listing_days&quot;: 20,
+      &quot;min_amount&quot;: 0,
+      &quot;single&quot;: 0.1,
+      &quot;industry&quot;: 0.25,
+      &quot;top5&quot;: 0.4,
+      &quot;neutralize&quot;: true,
+      &quot;blacklist&quot;: [],
+      &quot;whitelist&quot;: [],
+      &quot;rules&quot;: []
+    }
+  },
+  &quot;config_hash&quot;: &quot;bf14df336f44e0a349eb8fdcf9d8c4fe17ec5be863a811c385f833278cd75b57&quot;
+}</pre></html>
