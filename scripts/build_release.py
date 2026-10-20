@@ -42,7 +42,7 @@ def main():
     subprocess.check_call(["git", "bundle", "create", str(bundle), "--all"], cwd=ROOT)
     entries = sources()
     manifest = {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "git_commit": commit,
         "files": [
             {
@@ -53,7 +53,7 @@ def main():
             for p in entries
         ],
     }
-    source = output / "AshareQuant-v1.0.0-source.zip"
+    source = output / "AshareQuant-v1.0.1-source.zip"
     with zipfile.ZipFile(source, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in entries:
             archive.write(path, Path("AshareQuant") / path.relative_to(ROOT))

@@ -144,7 +144,7 @@ class MainWindow(QMainWindow):
         side.addSpacing(28)
         self.nav = QListWidget()
         side.addWidget(self.nav)
-        side.addWidget(QLabel("LOCAL RESEARCH  /  v1.0.0"))
+        side.addWidget(QLabel("LOCAL RESEARCH  /  v1.0.1"))
         outer.addWidget(sidebar)
         content = QWidget()
         layout = QVBoxLayout(content)

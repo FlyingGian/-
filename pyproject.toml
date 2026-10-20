@@ -1,6 +1,6 @@
 [project]
 name = "ashare-quant"
-version = "1.0.0"
+version = "1.0.1"
 description = "A股量化研究桌面工作站"
 requires-python = ">=3.12,<3.14"
 

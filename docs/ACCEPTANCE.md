@@ -37,3 +37,8 @@ python -m pytest -q --cov=domain --cov=application --cov=infrastructure
 预期102通过；GUI无屏环境设置QT_QPA_PLATFORM=offscreen。Windows用户正常启动不需执行上述开发命令。第三方pyqtgraph在Qt销毁时可能打印一次信号断开RuntimeWarning，未导致测试失败；warning不等于网络或金融语义验证完成。
 
 能力边界：日频撮合为保守近似，不是逐笔订单簿重建；盘中量比若无过去五日同时点数据则显示缺失；仅自选逐笔支持精确回放，全市场分钟聚合不能证明逐秒95%一致率；恢复连接记录需日频回补，由增量更新完成；历史财务修订、特殊限价、退市终止价值及税后分红仍依赖数据完整性。完整Brinson/Barra归因与尾盘历史分钟策略尚未集成进报告，不能声称已完成这些研究要求。软件可以用于可核验本地研究，尚不具备“全部P0与生产验收均完成”的证据。
+
+
+## GitHub交付更新
+
+目标仓库：https://github.com/FlyingGian/- 。源码与Release已成功发布，Git推送权限实际可用。v1.0.1修复CI的YAML解析问题，未更改金融算法；远程Windows/Linux测试的最终状态以仓库Actions为准。前面的“未推送”记录描述原始云端交付阶段。
